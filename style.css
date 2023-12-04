@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(-45deg, red, green, white, black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: 200%, 200%;
+  animation: bg 10s ease-in-out infinite;
+}
+.container {
+  width: 56%;
+  height: 50vh;
+  position: relative;
+}
+.black,
+.white,
+.green {
+  height: 33.3%;
+}
+
+.black {
+  background: black;
+}
+
+.white {
+  background: white;
+}
+
+.green {
+  background: green;
+}
+.red {
+  position: absolute;
+  border-top: 25vh solid transparent;
+  border-left: 28vw solid red;
+  border-bottom: 25vh solid transparent;
+}
+@keyframes bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
